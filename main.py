@@ -1,6 +1,6 @@
 from avl_node import insert_avl
 from binary_node import BinaryNode, insert_bst
-from lib import get_min_node_value, print_task_header, sum_tree
+from lib import get_min_node_value, min_cost_cables, print_task_header, sum_tree
 from colorama import init, Fore
 
 init(autoreset=True)
@@ -32,3 +32,18 @@ print("Sum of all values in AVL Tree:", avl_sum)
 print(Fore.CYAN + "=== Sum of all values in BST ===")
 bst_sum = sum_tree(root_bst)
 print("Sum of all values in BST:", bst_sum)
+
+print_task_header(3)
+print(Fore.CYAN + "=== Minimum cost to connect cables ===")
+cases = [
+    [],
+    [5],
+    [1, 2],
+    [4, 3, 2, 6],
+    [8, 4, 6, 12],
+    [5, 5, 5, 5, 5],
+]
+
+for arr in cases:
+    cost = min_cost_cables(arr)
+    print(f"Cables = {arr} -> minimal cost = {cost}")
