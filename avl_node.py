@@ -12,14 +12,3 @@ class AVLNode:
         if self.right:
             ret += self.right.__str__(level + 1, "R--- ")
         return ret
-    
-    def insert(self, key):
-        if not self:
-            return AVLNode(key)
-
-        if key < self.key:
-            self.left = self.left.insert(key)
-        elif key > self.key:
-            self.right = self.right.insert(key)
-        else:
-            return self
