@@ -3,7 +3,7 @@ def min_value_node(node):
     Given a non-empty binary search tree, return the node with the minimum key.
     """
     current = node
-    while current.left is not None:
+    while current.left:
         current = current.left
     return current
 
