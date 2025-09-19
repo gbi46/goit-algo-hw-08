@@ -5,13 +5,16 @@ from lib import get_min_node_value
 from colorama import init, Fore
 init(autoreset=True)
 
-print(Fore.GREEN + "=========================")
-for i in range(6):
-    if i == 3:
-        print(Fore.GREEN + "=" + Fore.YELLOW + " " * 8 + "Task 1" + Fore.GREEN + " " * 9 + "=")
-    else:
-        print(Fore.GREEN + "=                       =")
-print(Fore.GREEN + "=========================")
+def print_task_header(task_number: int):
+    print(Fore.GREEN + "=========================")
+
+    for i in range(6):
+        if i == 3:
+            print(Fore.GREEN + "=" + Fore.YELLOW + " " * 8 + f"Task {task_number}" + Fore.GREEN + " " * 9 + "=")
+        else:
+            print(Fore.GREEN + "=                       =")
+    print(Fore.GREEN + "=========================")
+
 print(Fore.CYAN + "=== AVL Tree Example ===")
 root = None
 values_to_insert = [10, 20, 5, 8, 3, 4, 1]
