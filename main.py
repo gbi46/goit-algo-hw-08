@@ -1,6 +1,10 @@
 from avl_node import insert_avl
 from lib import get_min_node_value
 
+from colorama import init, Fore
+init(autoreset=True)
+
+print(Fore.GREEN + "=== Task 1 ===")
 print("=== AVL Tree Example ===")
 root = None
 values_to_insert = [10, 20, 5, 8, 3, 4, 1]
