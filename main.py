@@ -1,4 +1,5 @@
 from avl_node import insert_avl
+from binary_node import BinaryNode, insert_bst
 from lib import get_min_node_value
 
 from colorama import init, Fore
@@ -21,7 +22,6 @@ for value in values_to_insert:
     print("Min node value:", get_min_node_value(root))
 
 print(Fore.CYAN + "=== Binary Search Tree Example ===")
-from binary_node import BinaryNode, insert_bst
 root = BinaryNode(50)
 nodes_to_insert = [30, 20, 40, 70, 60, 80]
 for key in nodes_to_insert:
