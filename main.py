@@ -15,6 +15,7 @@ def print_task_header(task_number: int):
             print(Fore.GREEN + "=                       =")
     print(Fore.GREEN + "=========================")
 
+print_task_header(1)
 print(Fore.CYAN + "=== AVL Tree Example ===")
 root = None
 values_to_insert = [10, 20, 5, 8, 3, 4, 1]
