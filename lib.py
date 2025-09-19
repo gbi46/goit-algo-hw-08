@@ -1,4 +1,7 @@
 from colorama import init, Fore
+from heapq import heapify, heappop, heappush
+from typing import List, Tuple
+
 init(autoreset=True)
 
 def print_task_header(task_number: int):
@@ -56,5 +59,35 @@ def sum_tree(root):
             stack.append(node.left)
         if node.right:
             stack.append(node.right)
+
+    return total
+
+def min_cost_cables(lengths: List[int]) -> int:
+    """
+    Compute the minimal total cost of connecting all cables pairwise using a min-heap.
+    Each merge of two cables costs the sum of their lengths; the merged cable is reinserted.
+
+    Args:
+        lengths: List of cable lengths (non-negative integers).
+
+    Returns:
+        Minimal possible total cost to connect all cables into one.
+        Returns 0 if there are 0 or 1 cables.
+    """
+    if len(lengths) <= 1:
+        return 0
+
+    # Build a min-heap of lengths
+    heap = list(lengths)
+    heapify(heap)
+
+    total = 0
+    # Keep merging the two smallest until one cable remains
+    while len(heap) > 1:
+        a = heappop(heap)
+        b = heappop(heap)
+        cost = a + b
+        total += cost
+        heappush(heap, cost)
 
     return total
