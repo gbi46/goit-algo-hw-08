@@ -4,8 +4,14 @@ from lib import get_min_node_value
 from colorama import init, Fore
 init(autoreset=True)
 
-print(Fore.GREEN + "=== Task 1 ===")
-print("=== AVL Tree Example ===")
+print(Fore.GREEN + "=========================")
+for i in range(6):
+    if i == 3:
+        print(Fore.GREEN + "=" + Fore.YELLOW + " " * 8 + "Task 1" + Fore.GREEN + " " * 9 + "=")
+    else:
+        print(Fore.GREEN + "=                       =")
+print(Fore.GREEN + "=========================")
+print(Fore.CYAN + "=== AVL Tree Example ===")
 root = None
 values_to_insert = [10, 20, 5, 8, 3, 4, 1]
 for value in values_to_insert:
@@ -14,7 +20,7 @@ for value in values_to_insert:
     print(root)
     print("Min node value:", get_min_node_value(root))
 
-print("=== Binary Search Tree Example ===")
+print(Fore.CYAN + "=== Binary Search Tree Example ===")
 from binary_node import BinaryNode, insert_bst
 root = BinaryNode(50)
 nodes_to_insert = [30, 20, 40, 70, 60, 80]
