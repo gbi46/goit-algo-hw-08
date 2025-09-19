@@ -1,3 +1,16 @@
+from colorama import init, Fore
+init(autoreset=True)
+
+def print_task_header(task_number: int):
+    print(Fore.GREEN + "=========================")
+
+    for i in range(6):
+        if i == 3:
+            print(Fore.GREEN + "=" + Fore.YELLOW + " " * 8 + f"Task {task_number}" + Fore.GREEN + " " * 9 + "=")
+        else:
+            print(Fore.GREEN + "=                       =")
+    print(Fore.GREEN + "=========================")
+
 def get_min_node_value(node):
     """
     Return the value stored in a node (supports BST with 'val' or AVL with 'key').

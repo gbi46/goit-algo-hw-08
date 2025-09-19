@@ -1,19 +1,9 @@
 from avl_node import insert_avl
 from binary_node import BinaryNode, insert_bst
-from lib import get_min_node_value
-
+from lib import get_min_node_value, print_task_header
 from colorama import init, Fore
+
 init(autoreset=True)
-
-def print_task_header(task_number: int):
-    print(Fore.GREEN + "=========================")
-
-    for i in range(6):
-        if i == 3:
-            print(Fore.GREEN + "=" + Fore.YELLOW + " " * 8 + f"Task {task_number}" + Fore.GREEN + " " * 9 + "=")
-        else:
-            print(Fore.GREEN + "=                       =")
-    print(Fore.GREEN + "=========================")
 
 print_task_header(1)
 print(Fore.CYAN + "=== AVL Tree Example ===")
