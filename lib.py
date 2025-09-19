@@ -1,3 +1,12 @@
+def min_value_node(node):
+    """
+    Given a non-empty binary search tree, return the node with the minimum key.
+    """
+    current = node
+    while current.left is not None:
+        current = current.left
+    return current
+
 def get_node_value(node):
     """
     Return the value stored in a node (supports BST with 'val' or AVL with 'key').
