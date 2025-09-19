@@ -11,3 +11,13 @@ class BinaryNode:
         if self.right:
             ret += self.right.__str__(level + 1, "R--- ")
         return ret
+    
+def insert_bst(root, key):
+    if root is None:
+        return BinaryNode(key)
+    else:
+        if key < root.val:
+            root.left = insert_bst(root.left, key)
+        else:
+            root.right = insert_bst(root.right, key)
+    return root
