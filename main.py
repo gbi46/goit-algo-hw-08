@@ -9,3 +9,13 @@ for value in values_to_insert:
     print(f"Inserted {value} into AVL Tree.")
     print(root)
     print("Min node value:", get_min_node_value(root))
+
+print("=== Binary Search Tree Example ===")
+from binary_node import BinaryNode, insert_bst
+root = BinaryNode(50)
+nodes_to_insert = [30, 20, 40, 70, 60, 80]
+for key in nodes_to_insert:
+    insert_bst(root, key)
+    print(f"Inserted {key} into BST.")
+    print(root)
+    print("Min node value:", get_min_node_value(root))
