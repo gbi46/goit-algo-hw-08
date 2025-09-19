@@ -1,4 +1,4 @@
-class Node:
+class BinaryNode:
     def __init__(self, key):
         self.left = None
         self.right = None
